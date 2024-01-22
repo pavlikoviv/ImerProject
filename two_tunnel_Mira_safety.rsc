@@ -31,6 +31,7 @@
 :if ($HQRoute = "") do={
 /ip route add distance=1 dst-address=172.16.0.0/16 gateway=l2tp-HQ_main pref-src=$ipLocalStore
 /ip route remove [/ip route find static dst-address =172.16.1.0/24]
+delay 4
 /interface l2tp-client set l2tp-HQ_main add-default-route=no
 }
 #set user l2tp_tun_mira
