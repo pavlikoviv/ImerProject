@@ -15,6 +15,7 @@
 }}
 
 #add netwatch rule
+/tool netwatch remove [find comment="Reboot_if_down_HQ_and_SPB"]
 /tool netwatch
 add host=172.16.1.1 interval=15m timeout=5s comment="Reboot_if_down_HQ_and_SPB" down-script="Reboot_if_down_HQ_and_SPB"
 }
