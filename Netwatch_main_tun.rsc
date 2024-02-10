@@ -7,7 +7,8 @@
     #-------------------------------------------------------------------------------
 
 #add system scrip
-/system script add name="Reboot_if_down_HQ_and_SPB" source={/log warning "server 172.16.1.1 fail..."
+/system script remove Reboot_if_down_HQ_and_SPB
+/system script add name="Reboot_if_down_HQ_and_SPB" dont-require-permissions=yes source={/log warning "server 172.16.1.1 fail..."
 :local checkip [/ping 172.16.2.1 count=5]
 :if (checkip = 0) do={
 /system reboot
