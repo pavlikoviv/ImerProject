@@ -1,10 +1,8 @@
 {
 #get user
 :global l2tpUser [/interface l2tp-client get [find name =l2tp-HQ_main] user]
-
 #get pass
 :global l2tpUserPass [/interface l2tp-client get [find name =l2tp-HQ_main] password]
-
 #get ip local and cut mask
 :global ipLocalStore [:pick [/ip address  get [find interface="bridge"] address] 0 [:find [/ip address  get [find interface="bridge"] address] "/"]]
 delay 2
